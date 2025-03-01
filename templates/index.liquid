@@ -1,0 +1,10 @@
+<h1>Hello</h1>
+{% for product in collections['automated-collection'].products %}
+  <a href="{{ product.url }}">
+    <div>
+      <img src="{{ product.featured_image | image_url :width: 100}}">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.price | money }}</p>
+    </div>
+  </a>
+{% endfor %}
